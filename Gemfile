@@ -3,9 +3,9 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 
 gem 'rails', '4.1.5'
+gem 'pg'
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
@@ -21,7 +21,6 @@ group :development, :test do
   gem 'better_errors', '~> 2.0.0'
   gem 'quiet_assets', '~> 1.0.3'
   gem 'spring'
-  gem 'sqlite3'
 end
 
 gem 'awesome_print', '~> 1.2.0'
