@@ -1,13 +1,13 @@
 development:
   sessions:
     default:
-      database: small_things_development
+      database: do_good_development
       hosts:
         - localhost:27017
 test:
   sessions:
     default:
-      database: small_things_test
+      database: do_good_test
       hosts:
         - localhost:27017
       options:
