@@ -1,9 +1,8 @@
-.row
+.deeds.row
   .small-3.large-3.columns &nbsp;
   .small-6.large-6.columns
     - @deeds.each do |day, deeds|
-      .day= cell(:day, day).show
+      = cell(:day, day).show
       - deeds.each do |deed|
-        .deed= cell(:deed, deed).show
-        %hr
+        = cell(:deed, deed).show
   .small-3.large-3.columns &nbsp;
