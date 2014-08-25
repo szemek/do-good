@@ -2,10 +2,8 @@
   .small-3.large-3.columns &nbsp;
   .small-6.large-6.columns
     - @deeds.each do |day, deeds|
-      %h1.day= cell(:day, day).show
+      .day= cell(:day, day).show
       - deeds.each do |deed|
-        %h5= deed.person
-        %h6= deed.created_at.to_s(:time)
-        %span= deed.action
+        .deed= cell(:deed, deed).show
         %hr
   .small-3.large-3.columns &nbsp;
