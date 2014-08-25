@@ -25,6 +25,7 @@ group :development, :test do
 end
 
 gem 'awesome_print', '~> 1.2.0'
+gem 'cells', '~> 3.11.2'
 gem 'foundation-rails', '~> 5.3.3.0'
 gem 'haml', '~> 4.0.5'
 gem 'mongoid', '~> 4.0.0'
