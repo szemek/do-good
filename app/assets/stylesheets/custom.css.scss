@@ -1,0 +1,16 @@
+.question {
+  font-family: 'Amatic SC', cursive;
+
+  .emphasize {
+    display: inline;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+form {
+  input[type=submit] {
+    display: block;
+    margin: 0 auto;
+  }
+}
