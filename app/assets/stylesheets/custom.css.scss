@@ -7,13 +7,16 @@
   :-ms-input-placeholder      {@content}
 }
 
-.question {
-  font-family: 'Amatic SC', cursive;
+.question, .captcha, .thanks {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
 
-  .emphasize {
-    display: inline;
-    font-weight: bold;
-    text-decoration: underline;
+    .emphasize {
+      display: inline;
+      font-weight: bold;
+      text-decoration: underline;
+    }
   }
 }
 
