@@ -26,6 +26,7 @@ end
 
 gem 'awesome_print', '~> 1.2.0'
 gem 'cells', '~> 3.11.2'
+gem 'font-awesome-rails', '~> 4.2.0.0'
 gem 'foundation-rails', '~> 5.3.3.0'
 gem 'haml', '~> 4.0.5'
 gem 'pry-rails', '~> 0.3.2'

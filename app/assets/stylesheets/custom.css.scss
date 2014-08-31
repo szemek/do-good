@@ -96,3 +96,55 @@ hr {
     text-align: right;
   }
 }
+
+footer {
+  clear: both;
+  float: left;
+  width: 100%;
+  padding: 30px;
+  background: #335958;
+
+  p {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: $text-size;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 auto;
+
+    &.heart {
+      margin: 10px auto;
+    }
+
+    &.strip {
+      margin: 30px auto 10px auto;
+    }
+
+    a {
+      color: white;
+      border-bottom: 1px solid white;
+
+      &:hover {
+        color: darken(white, 20%);
+        border-bottom: 1px solid darken(white, 20%);
+      }
+    }
+  }
+}
+
+.strip-wrapper {
+  text-align: center;
+  clear: both;
+  font-size: $text-size;
+  margin: 20px auto;
+}
+
+.fa.strip-icon:before {
+  position: relative;
+  left: -2.5px;
+  font-size: 3em;
+  content: "\f106\f106";
+  letter-spacing: -5px;
+  color: #72a09f;
+}
