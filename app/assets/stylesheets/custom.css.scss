@@ -45,11 +45,18 @@ form {
   }
 
   input[type=text] {
-    background: #95eece;
+    background: #d0e8ba;
 
     &:focus {
       background: lighten(#95eece, 15%);
     }
+  }
+
+  input[type=submit] {
+    background: #3b625e;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
   @include placeholder {
