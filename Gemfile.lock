@@ -27,6 +27,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    angularjs-rails (1.2.22)
     arel (5.0.1.20140414130214)
     awesome_print (1.2.0)
     better_errors (2.0.0)
@@ -170,6 +171,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  angularjs-rails (~> 1.2.22)
   awesome_print (~> 1.2.0)
   better_errors (~> 2.0.0)
   binding_of_caller (~> 0.7.2)

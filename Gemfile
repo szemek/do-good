@@ -24,6 +24,7 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'angularjs-rails', '~> 1.2.22'
 gem 'awesome_print', '~> 1.2.0'
 gem 'cells', '~> 3.11.2'
 gem 'font-awesome-rails', '~> 4.2.0.0'
