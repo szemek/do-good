@@ -15,7 +15,7 @@ html {
   :-ms-input-placeholder      {@content}
 }
 
-.question, .captcha, .thanks {
+.question, .captcha, .thanks, .rules {
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Amatic SC', cursive;
     text-align: center;
@@ -26,6 +26,10 @@ html {
       text-decoration: underline;
     }
   }
+}
+
+.rules p {
+  text-align: center;
 }
 
 .form {
@@ -156,6 +160,20 @@ footer {
   font-size: $text-size;
   margin: 20px auto;
 }
+
+// .strip-wrapper {
+//   .strip-icon {
+//     color: #335958;
+//   }
+// }
+
+// footer {
+//   .strip-wrapper {
+//     .strip-icon {
+//       color: #72a09f;
+//     }
+//   }
+// }
 
 .fa.strip-icon:before {
   position: relative;
