@@ -50,13 +50,14 @@ form {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 14px 33px;
+    cursor: pointer;
   }
 
   input[type=text] {
     background: #d0e8ba;
 
     &:focus {
-      background: lighten(#95eece, 15%);
+      background: #c1dcae;
     }
   }
 
