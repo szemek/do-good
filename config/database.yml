@@ -10,3 +10,7 @@ development:
 test:
   <<: *default
   database: do_good_test
+
+production:
+  <<: *default
+  database: do_good_production
