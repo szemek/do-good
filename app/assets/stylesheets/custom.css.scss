@@ -161,25 +161,16 @@ footer {
   margin: 20px auto;
 }
 
-// .strip-wrapper {
-//   .strip-icon {
-//     color: #335958;
-//   }
-// }
-
-// footer {
-//   .strip-wrapper {
-//     .strip-icon {
-//       color: #72a09f;
-//     }
-//   }
-// }
-
-.fa.strip-icon:before {
+.strip-icon:before {
   position: relative;
   left: -2.5px;
   font-size: 3em;
   content: "\f106\f106";
   letter-spacing: -5px;
   color: #72a09f;
+}
+
+.dark-strip-icon:before {
+  @extend .strip-icon;
+  color: #335958;
 }
