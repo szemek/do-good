@@ -9,6 +9,6 @@ class DeedsController < ApplicationController
   private
 
   def deed_params
-    params.require(:deed).permit(:person, :action)
+    params.require(:deed).permit(:person, :action, :happiness)
   end
 end
