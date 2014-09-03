@@ -1,8 +1,15 @@
-.question.row
+.question.row{'ng-show' => 'steps.question'}
   .small-3.large-3.columns &nbsp;
   .small-6.large-6.columns
     %h1
       what
       .emphasize good
       have you done today?
+    %form{'ng-submit' => 'nextStep()'}
+      .large-12.columns
+        %input{:type => 'text', :placeholder => 'I am...', 'ng-model' => 'deed.person', :required => true}
+      .large-12.columns
+        %input{:type => 'text', :placeholder => 'I did/I made/I helped...', 'ng-model' => 'deed.action', :required => true}
+      .large-12.columns
+        %input{:type => 'submit', :value => 'Share good'}
   .small-3.large-3.columns &nbsp;

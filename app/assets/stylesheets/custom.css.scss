@@ -59,8 +59,16 @@ form {
     }
   }
 
+  input[type=range] {
+    width: 100%;
+  }
+
   @include placeholder {
     color: #3b625e;
+  }
+
+  .scale .columns {
+    text-align: center;
   }
 }
 
