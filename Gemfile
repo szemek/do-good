@@ -24,9 +24,11 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'activeadmin', github: 'activeadmin'
 gem 'angularjs-rails', '~> 1.2.22'
 gem 'awesome_print', '~> 1.2.0'
 gem 'cells', '~> 3.11.2'
+gem 'devise', '~> 3.3.0'
 gem 'font-awesome-rails', '~> 4.2.0.0'
 gem 'foundation-rails', '~> 5.3.3.0'
 gem 'haml', '~> 4.0.5'
