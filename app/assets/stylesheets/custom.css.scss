@@ -194,3 +194,21 @@ footer {
   @extend .strip-icon;
   color: #335958;
 }
+
+.counter {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1 * $text-size;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+
+  span.digit {
+    padding: 3px;
+    background: #e8f7d5;
+    color: #3b625e;
+    font-weight: bolder;
+    font-size: 1.3 * $text-size;
+  }
+}
