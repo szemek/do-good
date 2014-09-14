@@ -1,4 +1,4 @@
-%footer
+%footer{'ng-controller' => 'RulesController'}
   %p made to share
   %p.heart= fa_icon 'heart-o 3x'
   %p
@@ -6,4 +6,8 @@
     = mail_to 'we@dogood.to', 'mod team'
   %p.strip-wrapper
     %i.fa.strip-icon
-  %p= link_to 'check how to share good', '#'
+  %p
+    %a{'ng-click' => 'displayRules()'}
+      check how to share good
+
+  = render 'shared/rules'

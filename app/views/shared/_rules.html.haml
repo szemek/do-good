@@ -1,4 +1,4 @@
-.rules.row
+.rules.row{'ng-show' => 'showRules'}
   .small-3.large-3.columns &nbsp;
   .small-6.large-6.columns
     %h1
@@ -27,7 +27,7 @@
       %strong 7.
       Everyone can be a hero. Just try!
 
-    %p= fa_icon 'times'
+    %p= fa_icon 'times', class: 'close', 'ng-click' => 'hideRules()'
 
   .small-3.large-3.columns &nbsp;
 
