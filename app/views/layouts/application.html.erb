@@ -12,6 +12,7 @@
     <%= stylesheet_link_tag 'application' %>
     <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Amatic+SC:400,700' %>
     <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' %>
+    <%= javascript_include_tag "application" %>
 
     <%= csrf_meta_tags %>
   </head>
@@ -20,6 +21,5 @@
     <%= render 'shared/header' %>
     <%= yield %>
     <%= render 'shared/footer' %>
-    <%= javascript_include_tag "application" %>
   </body>
 </html>
