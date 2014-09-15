@@ -1,11 +1,5 @@
 @import "foundation/functions";
 
-body {
-  background: url(bg.png);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-}
-
 @mixin placeholder {
   ::-webkit-input-placeholder {@content}
   :-moz-placeholder           {@content}
