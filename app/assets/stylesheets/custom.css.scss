@@ -224,10 +224,18 @@ footer {
   top: 0;
   bottom: 0;
 
+  h1 {
+    line-height: 50px;
+    margin: 50px auto;
+  }
+
   p {
     color: #345A58;
+    font-size: 1.2 * $text-size;
+    margin-bottom: 1.2 * $text-size;
 
     .close {
+      margin-top: 25px;
       border-radius: 30px;
       border: 1px solid #345A58;
       width: 30px;
