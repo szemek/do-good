@@ -45,7 +45,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    angularjs-rails (1.2.22)
     arbre (1.0.2)
       activesupport (>= 3.0.0)
     arel (5.0.1.20140414130214)
@@ -148,6 +147,10 @@ GEM
       railties (= 4.1.5)
       sprockets-rails (~> 2.0)
     rails-assets-angular (1.2.25)
+    rails-assets-angular-animate (1.2.25)
+      rails-assets-angular (= 1.2.25)
+    rails-assets-angular-resource (1.2.25)
+      rails-assets-angular (= 1.2.25)
     rails-assets-lodash (2.4.1)
     rails-assets-restangular (1.4.0)
       rails-assets-angular
@@ -234,7 +237,6 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
-  angularjs-rails (~> 1.2.22)
   awesome_print (~> 1.2.0)
   better_errors (~> 2.0.0)
   binding_of_caller (~> 0.7.2)
@@ -250,6 +252,9 @@ DEPENDENCIES
   pry-rails (~> 0.3.2)
   quiet_assets (~> 1.0.3)
   rails (= 4.1.5)
+  rails-assets-angular (~> 1.2.25)
+  rails-assets-angular-animate (~> 1.2.25)
+  rails-assets-angular-resource (~> 1.2.25)
   rails-assets-restangular
   rails_12factor
   rspec-rails (~> 3.0.2)

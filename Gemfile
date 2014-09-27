@@ -26,7 +26,6 @@ group :development, :test do
 end
 
 gem 'activeadmin', github: 'activeadmin'
-gem 'angularjs-rails', '~> 1.2.22'
 gem 'awesome_print', '~> 1.2.0'
 gem 'cells', '~> 3.11.2'
 gem 'devise', '~> 3.3.0'
@@ -37,4 +36,7 @@ gem 'pry-rails', '~> 0.3.2'
 gem 'thin', '~> 1.6.2'
 gem 'underscore-rails', '~> 1.7.0'
 
+gem 'rails-assets-angular', '~> 1.2.25'
+gem 'rails-assets-angular-animate', '~> 1.2.25'
+gem 'rails-assets-angular-resource', '~> 1.2.25'
 gem 'rails-assets-restangular'
