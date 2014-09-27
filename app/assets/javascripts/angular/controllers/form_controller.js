@@ -1,4 +1,4 @@
-app.controller('FormController', ['$scope', '$resource', function($scope, $resource){
+app.controller('DeedsController', ['$scope', '$resource', function($scope, $resource){
   var Deed = $resource('/deeds/:id', {id:'@id'});
 
   $scope.deed = {};
