@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   resources :deeds, only: [:create]
+
+  namespace :api do
+    resources :deeds, only: [:index]
+  end
 end
