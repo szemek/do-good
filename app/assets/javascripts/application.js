@@ -16,5 +16,6 @@
 //= require angular
 //= require angular-animate
 //= require angular-resource
+//= require restangular
 //= require ./angular/app
 //= require_tree .

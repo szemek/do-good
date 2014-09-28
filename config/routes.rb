@@ -4,9 +4,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  resources :deeds, only: [:create]
-
   namespace :api do
-    resources :deeds, only: [:index]
+    resources :deeds, only: [:index, :create]
   end
 end

@@ -1,9 +1,20 @@
 class Api::DeedsController < ApplicationController
-  respond_to :json
-
   def index
     deeds = Deed.all
 
-    respond_with(deeds)
+    render json: deeds
+  end
+
+  def create
+    deed = Deed.new(deed_params)
+    deed.save
+
+    render json: deed
+  end
+
+  private
+
+  def deed_params
+    params.require(:deed).permit(:person, :action, :happiness)
   end
 end
