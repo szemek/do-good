@@ -25,6 +25,7 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'active_model_serializers', '~> 0.9.0'
 gem 'activeadmin', github: 'activeadmin'
 gem 'awesome_print', '~> 1.2.0'
 gem 'cells', '~> 3.11.2'
