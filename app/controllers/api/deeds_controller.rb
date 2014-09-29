@@ -5,6 +5,12 @@ class Api::DeedsController < ApplicationController
     render json: deeds
   end
 
+  def grouped
+    deeds = Deed.grouped_by_day
+
+    render json: deeds
+  end
+
   def create
     deed = Deed.new(deed_params)
     deed.save

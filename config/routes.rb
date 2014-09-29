@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   namespace :api do
-    resources :deeds, only: [:index, :create]
+    resources :deeds, only: [:index, :create] do
+      collection do
+        get :grouped
+      end
+    end
   end
 end
