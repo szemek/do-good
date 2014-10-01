@@ -1,6 +1,6 @@
-app.controller('DeedsController', ['$scope', '$resource', 'Restangular', function($scope, $resource, Restangular){
-  Restangular.setRequestSuffix('.json')
-  var Deed = Restangular.all('api/deeds');
+app.controller('DeedsController', ['$scope', '$resource', 'Restangular', 'DeedsService', function($scope, $resource, Restangular, DeedsService){
+
+  DeedsService.fetch($scope);
 
   $scope.deed = {};
   $scope.steps = {question: true};
@@ -10,8 +10,10 @@ app.controller('DeedsController', ['$scope', '$resource', 'Restangular', functio
   };
 
   $scope.finish = function() {
+    var Deed = Restangular.all('api/deeds.json');
     Deed.post($scope.deed).then(function(deed){
       $scope.steps = {thanks: true};
+      DeedsService.fetch($scope);
     });
   };
 }]);
