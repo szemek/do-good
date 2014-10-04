@@ -4,6 +4,6 @@
     %p.strip-wrapper
       %i.fa.strip-icon
     together, we've done
-    = cell(:counter, @deeds_count).show
+    %span.digit{'ng-repeat' => 'digit in digits'} {{digit}}
     good deeds already
   .small-1.medium-2.large-3.columns &nbsp;

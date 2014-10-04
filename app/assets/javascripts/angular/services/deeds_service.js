@@ -26,6 +26,7 @@ app.factory('DeedsService', ['$resource', function($resource){
         });
 
         $scope.collection = sortDescByTimestamp(collection);
+        $scope.digits = _.size(data.deeds).toString().split('');
       });
     }
   };
