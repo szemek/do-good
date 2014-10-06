@@ -16,4 +16,11 @@ app.controller('DeedsController', ['$scope', '$resource', 'Restangular', 'DeedsS
       DeedsService.fetch($scope);
     });
   };
+
+  $scope.like = function(deed){
+    var Deed = Restangular.all('api/deeds/' + deed.id + '/like.json');
+    Deed.post().then(function(data){
+      _.extend(deed, data.deed);
+    });
+  };
 }]);

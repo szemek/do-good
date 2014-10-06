@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :deeds, only: [:index, :create] do
-      collection do
-        get :grouped
+      member do
+        post :like
       end
     end
   end

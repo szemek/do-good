@@ -12,6 +12,14 @@ class Api::DeedsController < ApplicationController
     render json: deed
   end
 
+  def like
+    deed = Deed.find(params[:id])
+    deed.likes.find_or_create_by(ip: request.ip)
+    deed.reload
+
+    render json: deed
+  end
+
   private
 
   def deed_params
