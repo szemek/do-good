@@ -1,7 +1,7 @@
 class DeedSerializer < ActiveModel::Serializer
   include ActionView::Helpers::AssetUrlHelper
 
-  attributes :id, :person, :action, :happiness_icon_url, :timestamp
+  attributes :id, :person, :action, :happiness_icon_url, :timestamp, :likes_count
 
   def happiness_icon_url
     name = case object.happiness

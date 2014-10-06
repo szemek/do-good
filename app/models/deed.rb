@@ -1,4 +1,6 @@
 class Deed < ActiveRecord::Base
+  has_many :likes
+
   validates :person, :action, presence: true
 
   scope :grouped_by_day, -> {

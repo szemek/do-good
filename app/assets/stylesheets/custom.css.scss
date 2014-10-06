@@ -151,6 +151,19 @@ hr {
         background-position: -16px 0;
       }
     }
+
+    .likes-count {
+      float: left;
+      color: #9bc1c0;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 17px;
+      width: 15px;
+      height: 10px;
+      position: relative;
+      left: 4px;
+    }
+
   }
 
 }
