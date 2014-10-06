@@ -14,7 +14,7 @@
           %p {{deed.action}}
           %hr
           .actions
-            .small-1.large-1.columns
+            .small-1.large-1.columns{'ng-class' => '{liked: deed.liked}'}
               .like{'ng-click' => 'like(deed)'}
               .likes-count {{deed.likes_count}}
             .small-10.large-10.columns &nbsp;

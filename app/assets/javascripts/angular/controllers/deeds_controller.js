@@ -20,7 +20,7 @@ app.controller('DeedsController', ['$scope', '$resource', 'Restangular', 'DeedsS
   $scope.like = function(deed){
     var Deed = Restangular.all('api/deeds/' + deed.id + '/like.json');
     Deed.post().then(function(data){
-      _.extend(deed, data.deed);
+      _.extend(deed, data.deed, {liked: true});
     });
   };
 }]);

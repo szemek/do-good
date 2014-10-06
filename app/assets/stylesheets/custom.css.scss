@@ -152,6 +152,16 @@ hr {
       }
     }
 
+    .liked {
+      .like {
+        background-position: -16px 0;
+      }
+      .likes-count {
+        color: #e69768;
+      }
+    }
+
+
     .likes-count {
       float: left;
       color: #9bc1c0;
