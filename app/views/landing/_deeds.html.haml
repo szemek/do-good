@@ -10,7 +10,7 @@
           %img{'ng-src' => '{{deed.happiness_icon_url}}'}
         .small-11.large-11.columns.info
           %h2 {{deed.person}}
-          %h3 {{deed.done_at}}
+          %h3 {{deed.timestamp | date:'h:mm a'}}
           %p {{deed.action}}
           %hr
           .actions

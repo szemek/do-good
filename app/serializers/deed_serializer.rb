@@ -1,7 +1,7 @@
 class DeedSerializer < ActiveModel::Serializer
   include ActionView::Helpers::AssetUrlHelper
 
-  attributes :id, :person, :action, :happiness_icon_url, :done_at, :timestamp
+  attributes :id, :person, :action, :happiness_icon_url, :timestamp
 
   def happiness_icon_url
     name = case object.happiness
@@ -12,10 +12,6 @@ class DeedSerializer < ActiveModel::Serializer
     end
 
     image_path("/assets/icons/#{name}.png")
-  end
-
-  def done_at
-    object.created_at.strftime("%-l:%M %P")
   end
 
   def timestamp
