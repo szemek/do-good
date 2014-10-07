@@ -1,5 +1,6 @@
 class Deed < ActiveRecord::Base
-  has_many :likes
+  has_many :likes, dependent: :delete_all
+  has_many :report, dependent: :delete_all
 
   validates :person, :action, presence: true
 
