@@ -192,6 +192,22 @@ header {
     background-repeat: no-repeat;
     margin: 0 auto;
   }
+
+  .login {
+    position: fixed;
+    top: 20px;
+    right: 50px;
+
+    display: block;
+    width: 124px;
+    height: 36px;
+    background: url(login.png);
+    background-size: 248px 36px;
+    background-repeat: no-repeat;
+    &:hover {
+      background-position: -124px 0;
+    }
+  }
 }
 
 footer {

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'landing#show'
 
   get '/auth/:provider/callback' => 'sessions#create'
+  get '/login' => 'facebook#login'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
