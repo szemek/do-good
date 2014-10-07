@@ -1,17 +1,13 @@
 class DeedSerializer < ActiveModel::Serializer
   include ActionView::Helpers::AssetUrlHelper
 
+  extend Forwardable
+  def_delegator :object, :happiness
+
   attributes :id, :person, :action, :happiness_icon_url, :timestamp, :likes_count
 
   def happiness_icon_url
-    name = case object.happiness
-      when 1 then 'ok'
-      when 2 then 'smile'
-      when 3 then 'happy'
-      else 'ok'
-    end
-
-    image_path("/assets/icons/#{name}.png")
+    image_path("/assets/icons/happiness/#{happiness}.png")
   end
 
   def timestamp
