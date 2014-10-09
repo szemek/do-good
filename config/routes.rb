@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :deeds, only: [:index, :create] do
       member do
         post :like
+        post :report
       end
     end
   end

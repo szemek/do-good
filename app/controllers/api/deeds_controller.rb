@@ -1,6 +1,6 @@
 class Api::DeedsController < ApplicationController
   def index
-    deeds = Deed.all
+    deeds = Deed.all.includes(:reports)
 
     render json: deeds
   end
@@ -15,6 +15,14 @@ class Api::DeedsController < ApplicationController
   def like
     deed = Deed.find(params[:id])
     deed.likes.find_or_create_by(ip: request.ip)
+    deed.reload
+
+    render json: deed
+  end
+
+  def report
+    deed = Deed.find(params[:id])
+    deed.reports.find_or_create_by(ip: request.ip)
     deed.reload
 
     render json: deed
