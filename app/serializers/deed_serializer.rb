@@ -4,7 +4,7 @@ class DeedSerializer < ActiveModel::Serializer
   extend Forwardable
   def_delegator :object, :happiness
 
-  attributes :id, :person, :action, :happiness_icon_url, :timestamp, :likes_count, :reported
+  attributes :id, :person, :action, :happiness_icon_url, :timestamp, :likes_count, :reported, :liked
 
   def happiness_icon_url
     image_path("/assets/icons/happiness/#{happiness}.png")
@@ -16,5 +16,9 @@ class DeedSerializer < ActiveModel::Serializer
 
   def reported
     object.reports.any?
+  end
+
+  def liked
+    object.likes.where(ip: scope.ip).any?
   end
 end

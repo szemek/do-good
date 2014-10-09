@@ -10,4 +10,6 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_user
+
+  serialization_scope :request
 end
