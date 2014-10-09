@@ -11,5 +11,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
+  include ActionController::Serialization
+
   serialization_scope :request
 end
