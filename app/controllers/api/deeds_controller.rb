@@ -20,6 +20,14 @@ class Api::DeedsController < ApplicationController
     render json: deed
   end
 
+  def unlike
+    deed = Deed.find(params[:id])
+    deed.likes.find_by(ip: request.ip).destroy
+    deed.reload
+
+    render json: deed
+  end
+
   def report
     deed = Deed.find(params[:id])
     deed.reports.find_or_create_by(ip: request.ip)
