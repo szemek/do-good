@@ -7,7 +7,7 @@
       have you done today?
     %form{'ng-submit' => 'nextStep()'}
       .large-12.columns
-        %input{:type => 'text', :placeholder => 'I am...', 'ng-model' => 'deed.person', :required => true}
+        %input{:type => 'text', :placeholder => 'I am...', 'ng-init' => "deed.person = '#{current_user_name}'", 'ng-model' => 'deed.person', :required => true}
       .large-12.columns
         %input{:type => 'text', :placeholder => 'I did/I made/I helped...', 'ng-model' => 'deed.action', :required => true}
       .large-12.columns
