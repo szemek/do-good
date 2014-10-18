@@ -9,7 +9,7 @@
       .large-12.columns
         %input{:type => 'text', :placeholder => 'I am...', 'ng-init' => "deed.person = '#{current_user_name}'", 'ng-model' => 'deed.person', :required => true}
       .large-12.columns
-        %input{:type => 'text', :placeholder => 'I did/I made/I helped...', 'ng-model' => 'deed.action', :required => true}
+        %textarea{:placeholder => 'I did/I made/I helped...', 'ng-model' => 'deed.action', :required => true}
       .large-12.columns
         %input{:type => 'submit', :value => 'Share good'}
   .small-1.medium-2.large-3.columns &nbsp;

@@ -29,7 +29,7 @@
 }
 
 form {
-  input[type=text], input[type=submit] {
+  input[type=text], input[type=submit], textarea {
     border-radius: 5px;
     border: none;
   }
@@ -45,12 +45,21 @@ form {
     cursor: pointer;
   }
 
-  input[type=text] {
+  input[type=text], textarea {
     background: #d0e8ba;
 
     &:focus {
       background: #c1dcae;
     }
+  }
+
+  input[type=text] {
+    height: 40px;
+  }
+
+  textarea {
+    height: 70px;
+    resize: vertical;
   }
 
   input[type=range] {
