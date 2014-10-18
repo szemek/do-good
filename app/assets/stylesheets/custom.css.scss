@@ -228,6 +228,42 @@ header {
       background-position: -124px 0;
     }
   }
+
+  .logged {
+    position: fixed;
+    top: 20px;
+    right: 50px;
+
+    img.avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 16px;
+      margin-right: 10px;
+    }
+
+    span.username {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.75rem;
+      text-align: center;
+      color: rgba(231, 249, 220, 0.8);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      margin-right: 20px;
+    }
+
+    .fa-power-off {
+      position: relative;
+      top: 2px;
+      color: rgba(231, 249, 220, 0.5);
+      font-size: 1.25rem;
+
+      &:hover {
+        color: rgba(231, 249, 220, 0.8);
+      }
+    }
+  }
+
 }
 
 footer {
