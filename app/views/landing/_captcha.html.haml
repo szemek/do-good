@@ -1,10 +1,7 @@
 .captcha.row{'ng-show' => 'steps.captcha'}
   .small-1.medium-2.large-3.columns &nbsp;
   .small-10.medium-8.large-6.columns
-    %h1
-      \...and how
-      .emphasize happy
-      are you with that?
+    = image_tag('form/captcha.png', alt: 'captcha')
     %form{'ng-submit' => 'finish()'}
       .large-12.columns
         .large-1.columns &nbsp;

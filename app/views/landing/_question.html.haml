@@ -1,10 +1,7 @@
 .question.row{'ng-show' => 'steps.question'}
   .small-1.medium-2.large-3.columns &nbsp;
   .small-10.medium-8.large-6.columns
-    %h1
-      what
-      .emphasize good
-      have you done today?
+    = image_tag('form/question.png', alt: 'question')
     %form{'ng-submit' => 'nextStep()'}
       .large-12.columns
         %input{:type => 'text', :placeholder => 'I am...', 'ng-init' => "deed.person = '#{current_user_name}'", 'ng-model' => 'deed.person', :required => true}

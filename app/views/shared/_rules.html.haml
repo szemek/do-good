@@ -1,9 +1,9 @@
 .rules.row{'ng-show' => 'showRules'}
   .small-1.medium-2.large-3.columns &nbsp;
   .small-10.medium-8.large-6.columns
-    %h1
-      golden rules of doing
-      .emphasize good
+    %a.logo{href: root_path}
+
+    = image_tag('rules.png', alt: 'rules')
 
     %p
       %strong 1.
