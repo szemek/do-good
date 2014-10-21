@@ -4,7 +4,10 @@
     %div{'ng-repeat' => 'combined in collection'}
       .strip-wrapper
         %i.fa.dark-strip-icon
-      .day {{combined.timestamp | date:'d MMMM'}}
+      .day
+        {{combined.timestamp | date:'d'}}
+        %sup {{combined.timestamp | date:'d' | ordinal}}
+        {{combined.timestamp | date:'MMMM'}}
       .deed{'ng-repeat' => 'deed in combined.deeds'}
         .small-1.large-1.columns.icon
           %img{'ng-src' => '{{deed.happiness_icon_url}}'}
