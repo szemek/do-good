@@ -19,3 +19,6 @@
 //= require restangular
 //= require ./angular/app
 //= require_tree .
+//= require foundation/foundation
+//= require foundation/foundation.reveal
+$(function(){ $(document).foundation(); });

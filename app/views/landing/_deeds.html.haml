@@ -23,6 +23,6 @@
               .likes-count {{deed.likes_count}}
             .small-10.large-10.columns &nbsp;
             .small-1.large-1.columns{'ng-class' => '{reported: deed.reported}'}
-              .report{'ng-click' => 'report(deed)'}
+              .report{'ng-click' => 'report(deed)', 'data-reveal-id' => 'report-modal'}
 
   .small-1.medium-2.large-2.columns &nbsp;
