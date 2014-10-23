@@ -401,5 +401,10 @@ footer {
 .social-buttons {
   position: fixed;
   top: 200px;
-  left: 0;
+  left: 5px;
+  text-align: center;
+
+  .twitter-share {
+    margin-top: 5px;
+  }
 }
