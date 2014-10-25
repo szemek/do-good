@@ -238,9 +238,7 @@ header {
   }
 
   .logged {
-    position: fixed;
-    top: 20px;
-    right: 50px;
+    float: right;
 
     img.avatar {
       width: 32px;
@@ -258,7 +256,7 @@ header {
       text-transform: uppercase;
       letter-spacing: 3.5px;
       font-weight: 700;
-      margin-right: 20px;
+      margin-right: 10px;
     }
 
     .fa-power-off {
