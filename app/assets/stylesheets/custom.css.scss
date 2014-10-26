@@ -93,6 +93,7 @@ $text-size: rem-calc(10);
   text-transform: uppercase;
   margin-bottom: 3 * $text-size;
   letter-spacing: 3.5px;
+  color: #335958;
 
   sup {
     position: relative;
@@ -114,22 +115,32 @@ hr {
   }
 
   h2 {
-    font-size: 1.3 * $text-size;
-    line-height: 1.3 * $text-size;
-    font-weight: 500;
+    font-size: rem-calc(12);
+    line-height: rem-calc(12);
+    font-weight: bold;
+    color: #728981;
     margin: 0;
   }
 
   h3 {
-    font-size: 1.1 * $text-size;
-    line-height: 1.1 * $text-size;
-    font-weight: 500;
+    font-size: rem-calc(11);
+    line-height: rem-calc(11);
     margin-top: 0;
+    color: #335958;
+
+    span:first-child {
+      font-weight: 600;
+    }
+
+    span:last-child {
+      font-weight: 700;
+    }
   }
 
   p {
-    font-size: 1.4 * $text-size;
+    font-size: rem-calc(14);
     margin-bottom: 0;
+    color: #669392;
   }
 
   h2, h3 {
