@@ -1,0 +1,9 @@
+@media (max-width: 640px) {
+  span.tooltip {
+    display: none !important;
+  }
+}
+
+.has-tip, .has-tip:hover, .has-tip:focus {
+  border-bottom: none;
+}
