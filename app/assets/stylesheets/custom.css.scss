@@ -381,17 +381,27 @@ footer {
     color: #345A58;
     font-size: 1.2 * $text-size;
     margin-bottom: 1.2 * $text-size;
+  }
+}
 
-    .close {
-      margin-top: 25px;
-      border-radius: 30px;
-      border: 1px solid #345A58;
-      width: 30px;
-      height: 30px;
+p {
+  .close {
+    color: #345A58;
+    margin-top: 25px;
+    border-radius: 30px;
+    border: 1px solid #345A58;
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0;
+    cursor: pointer;
+
+    &.close-reveal-modal {
+      position: static;
       font-size: 14px;
       line-height: 28px;
-      letter-spacing: 0;
-      cursor: pointer;
+      color: #345A58;
     }
   }
 }
@@ -404,5 +414,30 @@ footer {
 
   .twitter-share {
     margin-top: 5px;
+  }
+}
+
+#report-modal {
+  img {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  p {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color:  #335958;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    margin-bottom: 0;
+
+    &.lighter {
+      font-weight: 600;
+    }
   }
 }

@@ -1,3 +1,5 @@
-#report-modal.tiny.reveal-modal{'data-reveal' => true}
+#report-modal.small.reveal-modal{'data-reveal' => true}
+  = image_tag 'love.png', alt: 'love', class: 'love'
   %p Thank you
-  %p for your help!
+  %p.lighter for your help!
+  %p= fa_icon 'times', class: 'close close-reveal-modal'
