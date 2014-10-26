@@ -1,6 +1,6 @@
 class Api::DeedsController < ApplicationController
   def index
-    deeds = Deed.all.includes(:reports)
+    deeds = Deed.all.includes(:reports).order(created_at: :desc).page(params[:page])
 
     render json: deeds
   end
