@@ -422,6 +422,33 @@ p {
   }
 }
 
+.close {
+  width: 41px;
+  height: 39px;
+  background: url(icons/close.png) no-repeat;
+  background-position: 0 0;
+  background-size: 123px 39px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 auto;
+
+  &:hover {
+    background-position: -41px 0;
+  }
+
+  &.close-reveal-modal {
+    background-position: -82px 0;
+    position: static;
+    margin-top: 20px;
+  }
+
+  &.close-rules, &.close-rules:hover {
+    background-position: -82px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
 .social-buttons {
   position: fixed;
   top: 50%;
