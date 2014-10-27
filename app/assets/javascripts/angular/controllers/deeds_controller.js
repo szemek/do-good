@@ -5,16 +5,21 @@ app.controller('DeedsController', ['$scope', '$resource', 'Restangular', 'DeedsS
   $scope.deed = {};
   $scope.steps = {question: true};
 
-  $scope.nextStep = function() {
+  $scope.goToCaptcha = function() {
     $scope.steps = {captcha: true};
   };
 
-  $scope.finish = function() {
+  $scope.goToThanks = function() {
     var Deed = Restangular.all('api/deeds.json');
     Deed.post($scope.deed).then(function(deed){
       $scope.steps = {thanks: true};
       DeedsService.fetch($scope);
     });
+  };
+
+  $scope.goToQuestion = function() {
+    $scope.deed = _.pick($scope.deed, 'person');
+    $scope.steps = {question: true};
   };
 
   $scope.like = function(deed){

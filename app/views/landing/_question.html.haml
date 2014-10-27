@@ -4,7 +4,7 @@
     = image_tag('form/question.png', alt: 'question')
     .small-1.medium-1.large-1.columns &nbsp;
     .small-10.medium-10.large-10.columns
-      %form{'ng-submit' => 'nextStep()'}
+      %form{'ng-submit' => 'goToCaptcha()'}
         .large-12.columns
           %input{:type => 'text', :placeholder => 'I am...', 'ng-init' => "deed.person = '#{current_user_name}'", 'ng-model' => 'deed.person', :required => true}
         .large-12.columns
