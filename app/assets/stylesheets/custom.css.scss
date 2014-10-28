@@ -18,11 +18,20 @@
       text-decoration: underline;
     }
   }
+}
 
+.question, .captcha, .rules {
   img {
     margin-top: 30px;
     margin-bottom: 70px;
   }
+}
+
+.thanks img.happiness {
+  width: 41px;
+  height: 39px;
+  margin: 20px auto;
+  display: block;
 }
 
 .rules p {
