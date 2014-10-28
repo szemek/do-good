@@ -22,6 +22,14 @@ app.controller('DeedsController', ['$scope', '$resource', 'Restangular', 'DeedsS
     $scope.steps = {question: true};
   };
 
+  $scope.beHappy = function(happiness){
+    $scope.deed = _.extend($scope.deed, {happiness: happiness});
+  };
+
+  $scope.isHappy = function(happiness){
+    return $scope.deed.happiness == happiness;
+  };
+
   $scope.like = function(deed){
     var Deed = Restangular.all('api/deeds/' + deed.id + '/like.json');
     Deed.post().then(function(data){
