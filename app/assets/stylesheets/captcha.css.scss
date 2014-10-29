@@ -36,7 +36,7 @@
       left: 200px;
     }
 
-    .happy-1-selection, .happy-2-selection, .happy-3-selection {
+    .happy-selection {
       background: url(selected.png);
       background-size: 64px 115px;
       background-repeat: no-repeat;
@@ -45,29 +45,20 @@
       position: absolute;
       top: 15px;
       z-index: 1;
-      visibility: hidden;
       cursor: pointer;
+      transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
     }
 
-    .happy-1-area:hover .happy-1-selection,
-    .happy-2-area:hover .happy-2-selection,
-    .happy-3-area:hover .happy-3-selection,
-    .happy-1-area .happy-1-selection.selected,
-    .happy-2-area .happy-2-selection.selected,
-    .happy-3-area .happy-3-selection.selected {
-      visibility: visible;
+   .happy-selection[data-selected="1"] {
+      left: 8px;
     }
 
-    .happy-1-selection {
-      left: 4px;
+    .happy-selection[data-selected="2"] {
+      left: 118px;
     }
 
-    .happy-2-selection {
-      left: 15px;
-    }
-
-    .happy-3-selection {
-      left: 26px;
+    .happy-selection[data-selected="3"] {
+      left: 228px;
     }
 
     .happy-1-icon {
