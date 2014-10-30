@@ -7,13 +7,13 @@ gem 'rails', '4.1.7'
 gem 'pg'
 
 group :production do
-  gem 'rails_12factor'
+  gem 'rails_12factor', '~> 0.0.3'
 end
 
 gem 'coffee-rails', '~> 4.0.0'
-gem 'jbuilder', '~> 2.0'
-gem 'jquery-rails'
-gem 'sass-rails', '~> 4.0.3'
+gem 'jbuilder', '~> 2.2.4'
+gem 'jquery-rails', '~> 3.1.2'
+gem 'sass-rails', '~> 4.0.4'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'uglifier', '>= 1.3.0'
 
@@ -38,7 +38,7 @@ gem 'kaminari', '~> 0.16.1'
 gem 'omniauth', '~> 1.2.2'
 gem 'omniauth-facebook', '~> 2.0.0'
 gem 'pry-rails', '~> 0.3.2'
-gem 'thin', '~> 1.6.2'
+gem 'thin', '~> 1.6.3'
 gem 'underscore-rails', '~> 1.7.0'
 
 gem 'rails-assets-angular', '~> 1.2.25'
