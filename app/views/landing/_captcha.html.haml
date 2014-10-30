@@ -9,13 +9,13 @@
           .choice{'ng-init' => 'deed.happiness = 2'}
             .slider
             .happy-areas
-              .happy-1-area{'ng-click' => 'beHappy(1)', 'ng-mouseover' => 'beHappy(1)'}
+              .happy-1-area{'ng-click' => 'beHappy(1)'}
                 .happy-1-icon
                 .happy-1-text happy
-              .happy-2-area{'ng-click' => 'beHappy(2)', 'ng-mouseover' => 'beHappy(2)'}
+              .happy-2-area{'ng-click' => 'beHappy(2)'}
                 .happy-2-icon
                 .happy-2-text very happy
-              .happy-3-area{'ng-click' => 'beHappy(3)', 'ng-mouseover' => 'beHappy(3)'}
+              .happy-3-area{'ng-click' => 'beHappy(3)'}
                 .happy-3-icon
                 .happy-3-text extremely happy
             .happy-selection{'data-selected' => '{{deed.happiness}}'}
