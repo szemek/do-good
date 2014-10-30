@@ -19,6 +19,6 @@ class DeedSerializer < ActiveModel::Serializer
   end
 
   def liked
-    object.likes.where(ip: scope.ip).any?
+    likes_count > 0
   end
 end
