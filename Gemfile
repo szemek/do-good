@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
-ruby '2.1.3'
+ruby '2.1.4'
 
-gem 'rails', '4.1.5'
+gem 'rails', '4.1.7'
 gem 'pg'
 
 group :production do
