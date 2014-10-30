@@ -17,23 +17,25 @@
     }
 
     .happy-1-area, .happy-2-area, .happy-3-area {
-      width: 100px;
-      height: 150px;
+      width: 64px;
+      height: 115px;
+      border-radius: 32px;
       position: absolute;
-      top: 0;
+      top: 15px;
       z-index: 3;
+      cursor: pointer;
     }
 
     .happy-1-area {
-      left: 0;
+      left: 8px;
     }
 
     .happy-2-area {
-      left: 100px;
+      left: 118px;
     }
 
     .happy-3-area {
-      left: 200px;
+      left: 228px;
     }
 
     .happy-selection {
@@ -63,17 +65,14 @@
 
     .happy-1-icon {
       background: url(icons/happiness/1.png);
-      left: 25px;
     }
 
     .happy-2-icon {
       background: url(icons/happiness/2.png);
-      left: 35px;
     }
 
     .happy-3-icon {
       background: url(icons/happiness/3.png);
-      left: 45px;
     }
 
     .happy-1-icon, .happy-2-icon, .happy-3-icon {
@@ -81,8 +80,10 @@
       height: 28px;
       background-size: 29px 28px;
       position: absolute;
-      top: 35px;
+      top: 18px;
       z-index: 2;
+      left: 50%;
+      transform: translateX(-50%);
       cursor: pointer;
     }
 
@@ -95,23 +96,19 @@
       text-transform: uppercase;
       text-align: center;
       position: absolute;
-      top: 100px;
+      top: 88px;
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 2;
       cursor: pointer;
     }
 
-    .happy-1-text {
-      left: 23px;
-    }
-
     .happy-2-text {
       width: 40px;
-      left: 29px;
     }
 
     .happy-3-text {
       width: 55px;
-      left: 32px;
     }
   }
 }
