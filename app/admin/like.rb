@@ -1,10 +1,11 @@
 ActiveAdmin.register Like do
-  permit_params :ip
+  permit_params :ip, :deed_id
 
   index do
     selectable_column
     id_column
     column :ip
+    column :deed
     column :created_at
     column :updated_at
     actions
@@ -17,6 +18,7 @@ ActiveAdmin.register Like do
   form do |f|
     f.inputs "Like Details" do
       f.input :ip
+      f.input :deed
     end
     f.actions
   end
