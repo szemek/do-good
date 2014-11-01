@@ -247,19 +247,6 @@ header {
   width: 100%;
   padding: 20px;
 
-  .login {
-    float: right;
-    display: block;
-    width: 124px;
-    height: 36px;
-    background: url(login.png);
-    background-size: 248px 36px;
-    background-repeat: no-repeat;
-    &:hover {
-      background-position: -124px 0;
-    }
-  }
-
   .logged {
     float: right;
 
@@ -293,7 +280,27 @@ header {
       }
     }
   }
+}
 
+@media (max-width: 640px) {
+  .login {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) {
+  .login {
+    float: right;
+    display: block;
+    width: 124px;
+    height: 36px;
+    background: url(login.png);
+    background-size: 248px 36px;
+    background-repeat: no-repeat;
+    &:hover {
+      background-position: -124px 0;
+    }
+  }
 }
 
 footer {
@@ -464,15 +471,23 @@ p {
   }
 }
 
-.social-buttons {
-  position: fixed;
-  top: 50%;
-  left: 5px;
-  text-align: center;
-  transform: translateY(-50%);
+@media (max-width: 640px) {
+  .social-buttons {
+    display: none;
+  }
+}
 
-  .twitter-share {
-    margin-top: 5px;
+@media (min-width: 641px) {
+  .social-buttons {
+    position: fixed;
+    top: 50%;
+    left: 5px;
+    text-align: center;
+    transform: translateY(-50%);
+
+    .twitter-share {
+      margin-top: 5px;
+    }
   }
 }
 
