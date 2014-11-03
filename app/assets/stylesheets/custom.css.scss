@@ -64,6 +64,16 @@ form {
     &:hover {
       background: #3e715e;
     }
+
+    &.share-good-button {
+      width: 175px;
+      height: 41px;
+    }
+
+    &.share-happiness-button {
+      width: 221px;
+      height: 41px;
+    }
   }
 
   input[type=text], textarea {
