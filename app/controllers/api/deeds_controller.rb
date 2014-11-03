@@ -5,6 +5,10 @@ class Api::DeedsController < ApplicationController
     render json: deeds
   end
 
+  def count
+    render json: {count: Deed.count}
+  end
+
   def create
     deed = Deed.new(deed_params)
     deed.save

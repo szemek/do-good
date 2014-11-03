@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :deeds, only: [:index, :create] do
+      collection do
+        get :count
+      end
       member do
         post :like
         post :unlike

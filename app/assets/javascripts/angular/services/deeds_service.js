@@ -26,7 +26,11 @@ app.factory('DeedsService', ['$resource', function($resource){
         });
 
         $scope.collection = sortDescByTimestamp(collection);
-        $scope.digits = _.size(data.deeds).toString().split('');
+      });
+
+      var DeedCount = $resource('api/deeds/count.json');
+      DeedCount.get().$promise.then(function(data){
+        $scope.digits = data.count.toString().split('');
       });
     }
   };
