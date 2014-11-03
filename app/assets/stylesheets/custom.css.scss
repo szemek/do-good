@@ -7,6 +7,10 @@
   :-ms-input-placeholder      {@content}
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .question, .captcha, .thanks, .rules {
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Amatic SC', cursive;
