@@ -19,5 +19,12 @@ Rails.application.routes.draw do
         post :report
       end
     end
+
+    resources :hooks, only: [] do
+      collection do
+        post :email
+      end
+    end
   end
+
 end
