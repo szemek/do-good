@@ -18,7 +18,7 @@ app.controller('DeedsController', ['$scope', '$resource', 'Restangular', 'DeedsS
   };
 
   $scope.goToQuestion = function() {
-    $scope.deed = _.pick($scope.deed, 'person');
+    $scope.deed = _.pick($scope.deed, 'person', 'happiness');
     $scope.steps = {question: true};
   };
 
