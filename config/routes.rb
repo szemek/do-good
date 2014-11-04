@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   namespace :api do
-    resources :deeds, only: [:index, :create] do
+    resources :deeds, only: [:index, :create, :show] do
       collection do
         get :count
       end

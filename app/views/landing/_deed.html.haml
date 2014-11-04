@@ -9,10 +9,8 @@
     %p {{deed.action}}
     %hr
     .actions
-      .small-1.large-1.columns{'ng-class' => '{liked: deed.liked}'}
-        .like{'ng-hide' => 'deed.liked', 'ng-click' => 'like(deed)'}
-        .like{'ng-show' => 'deed.liked', 'ng-click' => 'unlike(deed)'}
-        .likes-count {{deed.likes_count}}
+      .small-1.large-1.columns &nbsp;
       .small-10.large-10.columns &nbsp;
-      .small-1.large-1.columns{'ng-class' => '{reported: deed.reported}'}
-        .report.has-tip{'ng-click' => 'report(deed)', 'data-reveal-id' => 'report-modal', 'tooltip-html-unsafe' => 'Report&nbsp;abuse', 'tooltip-animation' => 'false'}
+      .small-1.large-1.columns
+        &nbsp;
+        = render partial: 'shared/like', locals: {expression: 'deed.like_url'}
