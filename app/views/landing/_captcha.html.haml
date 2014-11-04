@@ -1,11 +1,11 @@
 .captcha.row{'ng-show' => 'steps.captcha'}
-  .small-1.medium-2.large-2.columns &nbsp;
-  .small-10.medium-8.large-8.columns
+  .hide-for-small-only.medium-2.large-2.columns &nbsp;
+  .small-12.medium-8.large-8.columns
     = image_tag('form/captcha.png', alt: 'captcha')
     %form{'ng-submit' => 'goToThanks()'}
-      .large-12.columns
-        .large-1.columns &nbsp;
-        .large-10.columns
+      .wrapper
+        .hide-for-small-only.large-1.columns &nbsp;
+        .small-12.large-10.columns
           .choice{'ng-init' => 'deed.happiness = 2'}
             .slider
             .happy-areas
@@ -20,7 +20,7 @@
                 .happy-3-text extremely happy
             .happy-selection{'data-selected' => '{{deed.happiness}}'}
               .pointer
-        .large-1.columns &nbsp;
+        .hide-for-small-only.large-1.columns &nbsp;
       .large-12.columns
         %input.share-happiness-button{:type => 'submit', :value => 'Share happiness'}
-  .small-1.medium-2.large-2.columns &nbsp;
+  .hide-for-small-only.medium-2.large-2.columns &nbsp;
