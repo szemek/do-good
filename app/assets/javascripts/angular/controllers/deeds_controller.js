@@ -1,8 +1,12 @@
 app.controller('DeedsController', ['$scope', '$resource', 'Restangular', 'DeedsService', function($scope, $resource, Restangular, DeedsService){
 
+  var deed = {
+    happiness: 2
+  };
+
   DeedsService.fetch($scope);
 
-  $scope.deed = {};
+  $scope.deed = _.clone(deed);
   $scope.steps = {question: true};
 
   $scope.goToCaptcha = function() {
@@ -18,7 +22,7 @@ app.controller('DeedsController', ['$scope', '$resource', 'Restangular', 'DeedsS
   };
 
   $scope.goToQuestion = function() {
-    $scope.deed = _.pick($scope.deed, 'person', 'happiness');
+    $scope.deed = _.chain($scope.deed).pick('person').extend(deed).value();
     $scope.steps = {question: true};
   };
 
