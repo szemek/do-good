@@ -2,8 +2,8 @@
   .small-1.medium-2.large-2.columns &nbsp;
   .small-10.medium-8.large-8.columns
     = image_tag('form/question.png', alt: 'question')
-    .small-1.medium-1.large-1.columns &nbsp;
-    .small-10.medium-10.large-10.columns
+    .hide-for-small-only.medium-1.large-1.columns &nbsp;
+    .small-12.medium-10.large-10.columns
       %form{'ng-submit' => 'goToCaptcha()'}
         .large-12.columns
           %input{:type => 'text', :placeholder => 'I am...', 'ng-init' => "deed.person = '#{current_user_name}'", 'ng-model' => 'deed.person', :required => true}
@@ -11,5 +11,5 @@
           %textarea{:placeholder => 'I did/I made/I helped...', 'ng-model' => 'deed.action', :required => true}
         .large-12.columns
           %input.share-good-button{:type => 'submit', :value => 'Share good'}
-    .small-1.medium-1.large-1.columns &nbsp;
+    .hide-for-small-only.medium-1.large-1.columns &nbsp;
   .small-1.medium-2.large-2.columns &nbsp;
