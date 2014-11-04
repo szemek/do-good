@@ -296,9 +296,26 @@ header {
   }
 }
 
+@media (max-width: 799px) {
+  span.username {
+    display: none;
+  }
+}
+
 @media (max-width: 640px) {
   .login {
-    display: none;
+    float: right;
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: url(mobile/login.png);
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    opacity: 0.33;
+
+    &:hover {
+      opacity: 0.66;
+    }
   }
 }
 
