@@ -1,24 +1,24 @@
 app.factory('DeedsService', ['$resource', function($resource){
+  var beginningOfDay = function(timestamp){
+    var date = new Date(timestamp);
+    date.setHours(0);
+    date.setMinutes(0);
+    date.setSeconds(0);
+    return date.valueOf();
+  };
+
+  var sortDescByTimestamp = function(collection) {
+    return _.sortBy(collection, function(item) { return -item.timestamp; });
+  };
+
+  var groupByBeginningOfDay = function(collection) {
+    return _.groupBy(collection, function(item) {
+      return beginningOfDay(item.timestamp);
+    });
+  };
+
   return {
     fetch: function($scope){
-      var beginningOfDay = function(timestamp){
-        var date = new Date(timestamp);
-        date.setHours(0);
-        date.setMinutes(0);
-        date.setSeconds(0);
-        return date.valueOf();
-      };
-
-      var sortDescByTimestamp = function(collection) {
-        return _.sortBy(collection, function(item) { return -item.timestamp; });
-      };
-
-      var groupByBeginningOfDay = function(collection) {
-        return _.groupBy(collection, function(item) {
-          return beginningOfDay(item.timestamp);
-        });
-      };
-
       var Deed = $resource('api/deeds.json');
       Deed.get().$promise.then(function(data) {
         var collection = groupByBeginningOfDay(data.deeds);
