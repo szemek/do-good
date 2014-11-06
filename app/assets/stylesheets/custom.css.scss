@@ -554,3 +554,12 @@ p {
     }
   }
 }
+
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #335958;
+  cursor: pointer;
+}
