@@ -1,18 +1,21 @@
 .captcha {
   .choice {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 150px;
     position: relative;
     margin: 0 auto;
 
     .slider {
-      background: url(slider.png);
-      width: 239px;
-      height: 13px;
+      width: 85%;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 5px;
       position: absolute;
       left: 50%;
-      top: 50%;
+      top: 55%;
       transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
       z-index: 2;
     }
 
@@ -27,15 +30,39 @@
     }
 
     .happy-1-area {
-      left: 8px;
+      left: 0;
     }
 
     .happy-2-area {
-      left: 118px;
+      left: 39.5%;
     }
 
     .happy-3-area {
-      left: 228px;
+      left: 79%;
+    }
+
+    .dot {
+      background: white;
+      width: 10px;
+      height: 10px;
+      left: 50%;
+      top: 71px;
+      border-radius: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      position: absolute;
+
+      .point {
+        position: absolute;
+        background: #3b625e;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+      }
     }
 
     .happy-selection {
@@ -56,22 +83,23 @@
         width: 13px;
         height: 16px;
         left: 50%;
-        top: 60px;
+        top: 64px;
         transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
         position: absolute;
       }
     }
 
    .happy-selection[data-selected="1"] {
-      left: 8px;
+      left: 0;
     }
 
     .happy-selection[data-selected="2"] {
-      left: 118px;
+      left: 39.5%;
     }
 
     .happy-selection[data-selected="3"] {
-      left: 228px;
+      left: 79%;
     }
 
     .happy-1-icon {
@@ -95,6 +123,7 @@
       z-index: 2;
       left: 50%;
       transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
       cursor: pointer;
     }
 
@@ -110,6 +139,7 @@
       top: 88px;
       left: 50%;
       transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
       z-index: 2;
       cursor: pointer;
     }

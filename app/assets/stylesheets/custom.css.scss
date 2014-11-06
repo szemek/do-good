@@ -459,6 +459,7 @@ p {
     left: 5px;
     text-align: center;
     transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     z-index: 999;
 
     .twitter-share {
@@ -472,6 +473,7 @@ p {
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
   color: #335958;
   cursor: pointer;
 }
