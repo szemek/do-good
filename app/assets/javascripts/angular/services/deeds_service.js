@@ -18,9 +18,9 @@ app.factory('DeedsService', ['$resource', function($resource){
   };
 
   return {
-    fetch: function($scope){
+    fetch: function($scope, page){
       var Deed = $resource('api/deeds.json');
-      Deed.get().$promise.then(function(data) {
+      Deed.get({page: page || 1}).$promise.then(function(data) {
         var collection = groupByBeginningOfDay(data.deeds);
         collection = _.map(collection, function(values, key) {
           return {
@@ -35,6 +35,7 @@ app.factory('DeedsService', ['$resource', function($resource){
       var DeedCount = $resource('api/deeds/count.json');
       DeedCount.get().$promise.then(function(data){
         $scope.digits = data.count.toString().split('');
+        $scope.totalItems = data.count;
       });
     }
   };

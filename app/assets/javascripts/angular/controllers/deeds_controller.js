@@ -9,6 +9,10 @@ app.controller('DeedsController', ['$scope', '$resource', 'Restangular', 'DeedsS
   $scope.deed = _.clone(deed);
   $scope.steps = {question: true};
 
+  $scope.page = 1;
+  $scope.maxSize = 5;
+  $scope.bigCurrentPage = 1;
+
   $scope.goToCaptcha = function() {
     $scope.steps = {captcha: true};
   };
@@ -53,5 +57,11 @@ app.controller('DeedsController', ['$scope', '$resource', 'Restangular', 'DeedsS
     Deed.post().then(function(data){
       _.extend(deed, data.deed, {reported: true});
     });
+  };
+
+  $scope.setPage = function (page) {
+    $scope.page = page;
+
+    DeedsService.fetch($scope, page);
   };
 }]);

@@ -1,0 +1,7 @@
+ul.pagination li.unavailable a, ul.pagination li.unavailable button {
+  visibility: hidden;
+}
+
+ul.pagination li.current a, ul.pagination li.current button {
+  background: #335958;
+}
