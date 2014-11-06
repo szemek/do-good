@@ -183,69 +183,11 @@ hr {
     }
   }
 
-  .actions {
-    & > div {
-      padding: 0;
-    }
-
+  .like {
     .fb_iframe_widget {
       float: right;
+      padding: 0;
     }
-
-    .like {
-      background: url(icons/hearts.png) no-repeat;
-      float: left;
-    }
-
-    .report {
-      background: url(icons/reports.png) no-repeat;
-      float: right;
-    }
-
-    .like, .report {
-      background-position: 0 0;
-      background-size: 32px 15px;
-      width: 16px;
-      height: 15px;
-      cursor: pointer;
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-
-    .liked {
-      .like {
-        background-position: -16px 0;
-
-        &:hover {
-          transform: scale(0.9);
-        }
-      }
-      .likes-count {
-        color: #e69768;
-      }
-    }
-
-    .reported {
-      .report {
-        cursor: default;
-        background-position: -16px 0;
-      }
-    }
-
-
-    .likes-count {
-      float: left;
-      color: #9bc1c0;
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 17px;
-      width: 15px;
-      height: 10px;
-      position: relative;
-      left: 4px;
-    }
-
   }
 
 }
@@ -473,13 +415,6 @@ p {
     line-height: 28px;
     letter-spacing: 0;
     cursor: pointer;
-
-    &.close-reveal-modal {
-      position: static;
-      font-size: 14px;
-      line-height: 28px;
-      color: #345A58;
-    }
   }
 }
 
@@ -526,31 +461,6 @@ p {
 
     .twitter-share {
       margin-top: 5px;
-    }
-  }
-}
-
-#report-modal {
-  img {
-    display: block;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 40px;
-  }
-
-  p {
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    color:  #335958;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 22px;
-    text-transform: uppercase;
-    letter-spacing: 3.5px;
-    margin-bottom: 0;
-
-    &.lighter {
-      font-weight: 600;
     }
   }
 }

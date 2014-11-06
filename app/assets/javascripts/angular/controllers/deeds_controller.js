@@ -38,27 +38,6 @@ app.controller('DeedsController', ['$scope', '$resource', 'Restangular', 'DeedsS
     return $scope.deed.happiness == happiness;
   };
 
-  $scope.like = function(deed){
-    var Deed = Restangular.all('api/deeds/' + deed.id + '/like.json');
-    Deed.post().then(function(data){
-      _.extend(deed, data.deed, {liked: true});
-    });
-  };
-
-  $scope.unlike = function(deed){
-    var Deed = Restangular.all('api/deeds/' + deed.id + '/unlike.json');
-    Deed.post().then(function(data){
-      _.extend(deed, data.deed, {liked: false});
-    });
-  };
-
-  $scope.report = function(deed){
-    var Deed = Restangular.all('api/deeds/' + deed.id + '/report.json');
-    Deed.post().then(function(data){
-      _.extend(deed, data.deed, {reported: true});
-    });
-  };
-
   $scope.setPage = function (page) {
     $scope.page = page;
 
