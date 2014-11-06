@@ -28,7 +28,6 @@ end
 gem 'active_model_serializers', '~> 0.9.0'
 gem 'activeadmin', github: 'activeadmin'
 gem 'awesome_print', '~> 1.2.0'
-gem 'cells', '~> 3.11.2'
 gem 'devise', '~> 3.4.1'
 gem 'dotenv-rails', '~> 1.0.2'
 gem 'font-awesome-rails', '~> 4.2.0.0'
