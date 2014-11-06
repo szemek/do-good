@@ -390,6 +390,7 @@ footer {
   right: 0;
   top: 0;
   bottom: 0;
+  z-index: 1000;
 
   h1 {
     line-height: 50px;
@@ -398,8 +399,8 @@ footer {
 
   p {
     color: #345A58;
-    font-size: 1.2 * $text-size;
-    margin-bottom: 1.2 * $text-size;
+    font-size: rem-calc(12);
+    margin-bottom: rem-calc(12);
   }
 }
 
