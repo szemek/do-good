@@ -41,6 +41,8 @@ app.controller('DeedsController', ['$scope', '$resource', 'Restangular', 'DeedsS
   $scope.setPage = function (page) {
     $scope.page = page;
 
-    DeedsService.fetch($scope, page);
+    $('body,html').animate({scrollTop: $('.deeds').offset().top }, 800, function(){
+      DeedsService.fetch($scope, page);
+    });
   };
 }]);
