@@ -446,6 +446,19 @@ p {
   }
 }
 
+.back {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 auto;
+  width: 34px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 2.5em;
+
+  &:hover {
+    color: white;
+  }
+}
+
 @media (max-width: 640px) {
   .social-buttons {
     display: none;
