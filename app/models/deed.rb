@@ -6,4 +6,10 @@ class Deed < ActiveRecord::Base
 
   paginates_per 25
   max_paginates_per 25
+
+  before_save :truncate_action
+
+  def truncate_action
+    self.action = self.action.slice(0...1000)
+  end
 end
