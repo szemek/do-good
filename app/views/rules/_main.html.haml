@@ -3,7 +3,8 @@
   .small-10.medium-8.large-6.columns
     %a.rules-logo{href: root_path}
 
-    = image_tag('rules.png', alt: 'rules')
+    .hide-for-small-only= image_tag('rules.png', alt: 'rules')
+    .show-for-small-only= render 'rules/text'
 
     %p
       %strong 1.

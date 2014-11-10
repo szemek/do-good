@@ -1,6 +1,6 @@
 .question.row{'ng-show' => 'steps.question'}
-  .small-1.medium-2.large-2.columns &nbsp;
-  .small-10.medium-8.large-8.columns
+  .hide-for-small-only.medium-2.large-2.columns &nbsp;
+  .small-12.medium-8.large-8.columns
     .hide-for-small-only= image_tag('form/question.png', alt: 'question')
     .show-for-small-only= render 'question/text'
 
@@ -14,4 +14,4 @@
         .large-12.columns
           %input.share-good-button{:type => 'submit', :value => 'Share good'}
     .hide-for-small-only.medium-1.large-1.columns &nbsp;
-  .small-1.medium-2.large-2.columns &nbsp;
+  .hide-for-small-only.medium-2.large-2.columns &nbsp;
