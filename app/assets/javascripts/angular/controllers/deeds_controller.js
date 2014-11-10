@@ -42,7 +42,9 @@ app.controller('DeedsController', ['$scope', '$resource', 'Restangular', 'DeedsS
     $scope.page = page;
 
     $('body,html').animate({scrollTop: $('.deeds').offset().top }, 800, function(){
-      DeedsService.fetch($scope, page);
+      DeedsService.fetch($scope, page, function(){
+        FB.XFBML.parse();
+      });
     });
   };
 }]);
