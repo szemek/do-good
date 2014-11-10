@@ -12,14 +12,22 @@ body {
 }
 
 .question, .captcha, .thanks, .rules {
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Amatic SC', cursive;
-    text-align: center;
+  .head-text {
+    h1 {
+      font-size: 3.5em;
+    }
 
-    .emphasize {
-      display: inline;
-      font-weight: bold;
-      text-decoration: underline;
+    h1, h2, h3, h4, h5, h6 {
+      color: white;
+      font-family: 'Amatic SC', cursive;
+      text-align: center;
+      font-weight: normal;
+
+      .emphasize {
+        display: inline;
+        font-weight: bold;
+        text-decoration: underline;
+      }
     }
   }
 }

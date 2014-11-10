@@ -1,7 +1,9 @@
 .question.row{'ng-show' => 'steps.question'}
   .small-1.medium-2.large-2.columns &nbsp;
   .small-10.medium-8.large-8.columns
-    = image_tag('form/question.png', alt: 'question')
+    .hide-for-small-only= image_tag('form/question.png', alt: 'question')
+    .show-for-small-only= render 'question/text'
+
     .hide-for-small-only.medium-1.large-1.columns &nbsp;
     .small-12.medium-10.large-10.columns
       %form{'ng-submit' => 'goToCaptcha()'}
