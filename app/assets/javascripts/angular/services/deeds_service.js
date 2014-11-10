@@ -1,5 +1,5 @@
-app.factory('DeedsService', ['$resource', function($resource){
-  var beginningOfDay = function(timestamp){
+app.factory('DeedsService', ['$resource', function($resource) {
+  var beginningOfDay = function(timestamp) {
     var date = new Date(timestamp);
     date.setHours(0);
     date.setMinutes(0);
@@ -18,7 +18,7 @@ app.factory('DeedsService', ['$resource', function($resource){
   };
 
   return {
-    fetch: function($scope, page, callback){
+    fetch: function($scope, page, callback) {
       var Deed = $resource('api/deeds.json');
       Deed.get({page: page || 1}).$promise.then(function(data) {
         var collection = groupByBeginningOfDay(data.deeds);
@@ -31,13 +31,13 @@ app.factory('DeedsService', ['$resource', function($resource){
 
         $scope.collection = sortDescByTimestamp(collection);
 
-        if(callback !== undefined){
+        if (callback !== undefined) {
           _.defer(callback);
         }
       });
 
       var DeedCount = $resource('api/deeds/count.json');
-      DeedCount.get().$promise.then(function(data){
+      DeedCount.get().$promise.then(function(data) {
         $scope.digits = data.count.toString().split('');
         $scope.totalItems = data.count;
       });

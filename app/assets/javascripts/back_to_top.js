@@ -1,10 +1,10 @@
-$(document).ready(function(){
+$(document).ready(function() {
   // hide .back-to-top first
-  $(".back-to-top").hide();
+  $('.back-to-top').hide();
 
   // fade in .back-to-top
-  $(function () {
-    $(window).scroll(function () {
+  $(function() {
+    $(window).scroll(function() {
       if ($(this).scrollTop() > 100) {
         $('.back-to-top').fadeIn();
       } else {
@@ -13,7 +13,7 @@ $(document).ready(function(){
     });
 
     // scroll body to 0px on click
-    $('.back-to-top').click(function () {
+    $('.back-to-top').click(function() {
       $('body,html').animate({
         scrollTop: 0
       }, 800);

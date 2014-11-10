@@ -19,7 +19,7 @@ app.controller('DeedsController', ['$scope', '$resource', 'Restangular', 'DeedsS
 
   $scope.goToThanks = function() {
     var Deed = Restangular.all('api/deeds.json');
-    Deed.post($scope.deed).then(function(deed){
+    Deed.post($scope.deed).then(function(deed) {
       $scope.steps = {thanks: true};
       DeedsService.fetch($scope);
     });
@@ -30,19 +30,21 @@ app.controller('DeedsController', ['$scope', '$resource', 'Restangular', 'DeedsS
     $scope.steps = {question: true};
   };
 
-  $scope.beHappy = function(happiness){
+  $scope.beHappy = function(happiness) {
     $scope.deed = _.extend($scope.deed, {happiness: happiness});
   };
 
-  $scope.isHappy = function(happiness){
+  $scope.isHappy = function(happiness) {
     return $scope.deed.happiness == happiness;
   };
 
-  $scope.setPage = function (page) {
+  $scope.setPage = function(page) {
     $scope.page = page;
 
-    $('body,html').animate({scrollTop: $('.deeds').offset().top }, 800, function(){
-      DeedsService.fetch($scope, page, function(){
+    $('body,html').animate({
+      scrollTop: $('.deeds').offset().top
+    }, 800, function() {
+      DeedsService.fetch($scope, page, function() {
         FB.XFBML.parse();
       });
     });

@@ -23,4 +23,6 @@
 //= require foundation/foundation
 //= require foundation/foundation.reveal
 //= require angular-foundation
-$(function(){ $(document).foundation(); });
+$(function() {
+  $(document).foundation();
+});
