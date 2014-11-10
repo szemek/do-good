@@ -6,12 +6,12 @@ app.controller('RulesController', ['$scope', function($scope){
     $('body').css({
       'overflow': 'hidden'
     });
-  }
+  };
 
   $scope.hideRules = function(){
     $scope.showRules = false;
     $('body').css({
       'overflow': 'auto'
     });
-  }
+  };
 }]);

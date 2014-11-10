@@ -31,7 +31,9 @@ app.factory('DeedsService', ['$resource', function($resource){
 
         $scope.collection = sortDescByTimestamp(collection);
 
-        callback && _.defer(callback);
+        if(callback !== undefined){
+          _.defer(callback);
+        }
       });
 
       var DeedCount = $resource('api/deeds/count.json');
