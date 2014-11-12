@@ -21,7 +21,9 @@ app.controller('DeedsController', ['$scope', '$resource', 'Restangular', 'DeedsS
     var Deed = Restangular.all('api/deeds.json');
     Deed.post($scope.deed).then(function(deed) {
       $scope.steps = {thanks: true};
-      DeedsService.fetch($scope);
+      DeedsService.fetch($scope, {page: 1}, function() {
+        FB.XFBML.parse();
+      });
     });
   };
 
@@ -44,7 +46,7 @@ app.controller('DeedsController', ['$scope', '$resource', 'Restangular', 'DeedsS
     $('body,html').animate({
       scrollTop: $('.deeds').offset().top
     }, 800, function() {
-      DeedsService.fetch($scope, page, function() {
+      DeedsService.fetch($scope, {page: page}, function() {
         FB.XFBML.parse();
       });
     });

@@ -18,9 +18,10 @@ app.factory('DeedsService', ['$resource', function($resource) {
   };
 
   return {
-    fetch: function($scope, page, callback) {
+    fetch: function($scope, params, callback) {
       var Deed = $resource('api/deeds.json');
-      Deed.get({page: page || 1}).$promise.then(function(data) {
+      params = params || {page: 1};
+      Deed.get(params).$promise.then(function(data) {
         var collection = groupByBeginningOfDay(data.deeds);
         collection = _.map(collection, function(values, key) {
           return {
