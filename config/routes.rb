@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root 'landing#show'
 
   get '/auth/:provider/callback' => 'sessions#create'
+  get '/auth/failure' => redirect('/')
+
   get '/login' => 'facebook#login'
   delete '/logout' => 'sessions#destroy'
 
