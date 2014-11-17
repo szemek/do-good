@@ -2,6 +2,7 @@
   %meta{property: 'og:title', content: "#{@deed.person} Did Good!"}
   %meta{property: 'og:description', content: @deed.action}
   %meta{property: 'og:image', content: URI.join(root_url, image_path('fb.png'))}
+  %meta{property: 'og:url', content: url_for(only_path: false)}
 
 .deeds.row{'ng-controller' => 'DeedController'}
   .hide-for-small-only.medium-2.large-2.columns &nbsp;
