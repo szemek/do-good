@@ -24,6 +24,6 @@ class DeedSerializer < ActiveModel::Serializer
   end
 
   def like_url
-    api_deed_url(object)
+    deed_url(object)
   end
 end

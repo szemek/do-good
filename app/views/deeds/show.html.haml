@@ -1,0 +1,28 @@
+.deeds.row{'ng-controller' => 'DeedController'}
+  .hide-for-small-only.medium-2.large-2.columns &nbsp;
+  .small-12.medium-8.large-8.columns
+    %div
+      .strip-wrapper
+        %i.fa.dark-strip-icon
+      .day
+        {{deed.timestamp | date:'d'}}
+        %sup {{deed.timestamp | date:'d' | ordinal}}
+        {{deed.timestamp | date:'MMMM'}}
+      .deed
+        .small-2.large-1.columns.icon
+          %img{'ng-src' => '{{deed.happiness_icon_url}}'}
+        .small-10.large-11.columns.info
+          %h2 {{deed.person}}
+          %h3
+            %span {{deed.timestamp | date:'h:mm a'}}
+            %span {{deed.timestamp | date:'dd/MM/yyyy'}}
+          %p {{deed.action}}
+          %hr
+          .like
+            .small-3.large-3.columns &nbsp;
+            .small-6.large-6.columns &nbsp;
+            .small-3.large-3.columns
+              = render partial: 'shared/like', locals: {expression: '{{deed.like_url}}'}
+
+
+  .hide-for-small-only.medium-2.large-2.columns &nbsp;

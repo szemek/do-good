@@ -29,4 +29,5 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :deeds, only: [:show]
 end
