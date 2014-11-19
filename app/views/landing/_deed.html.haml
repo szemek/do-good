@@ -7,9 +7,6 @@
       %span {{deed.timestamp | date:'h:mm a'}}
       %span {{deed.timestamp | date:'dd/MM/yyyy'}}
     %p {{deed.action}}
-    %hr
     .like
-      .small-3.large-3.columns &nbsp;
-      .small-6.large-6.columns &nbsp;
-      .small-3.large-3.columns
-        = render partial: 'shared/like', locals: {expression: '{{deed.like_url}}'}
+      = render partial: 'shared/like', locals: {expression: '{{deed.like_url}}'}
+    %hr
