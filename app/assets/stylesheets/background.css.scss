@@ -1,6 +1,6 @@
 @media (max-width: 640px) {
   body {
-    background: url(background/640.png);
+    background: asset-url("background/640.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
   }
@@ -8,7 +8,7 @@
 
 @media (min-width: 641px) and (max-width: 800px) {
   body {
-    background: url(background/800.png);
+    background: asset-url("background/800.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
   }
@@ -16,7 +16,7 @@
 
 @media (min-width: 801px) and (max-width: 1024px) {
   body {
-    background: url(background/1024.png);
+    background: asset-url("background/1024.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
   }
@@ -24,7 +24,7 @@
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   body {
-    background: url(background/1280.png);
+    background: asset-url("background/1280.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
   }
@@ -32,7 +32,7 @@
 
 @media (min-width: 1281px) {
   body {
-    background: url(background/1920.png);
+    background: asset-url("background/1920.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
   }
