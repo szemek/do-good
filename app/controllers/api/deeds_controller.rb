@@ -1,8 +1,8 @@
 class Api::DeedsController < ApplicationController
   def index
-    deeds = Deed.all.includes(:reports).order(created_at: :desc).page(params[:page])
+    search = DeedSearch.new(search_params)
 
-    render json: deeds
+    render json: search.results
   end
 
   def count
@@ -45,6 +45,13 @@ class Api::DeedsController < ApplicationController
   end
 
   private
+
+  def search_params
+    {
+      page: params[:page],
+      created_at: (params[:timestamp].to_i) / 1000
+    }
+  end
 
   def deed_params
     params.require(:deed).permit(:person, :action, :happiness)
