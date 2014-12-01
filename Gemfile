@@ -41,6 +41,7 @@ gem 'omniauth', '~> 1.2.2'
 gem 'omniauth-facebook', '~> 2.0.0'
 gem 'postmark-rails', '~> 0.8.0'
 gem 'pry-rails', '~> 0.3.2'
+gem 'searchlight', '~> 3.1.1'
 gem 'thin', '~> 1.6.3'
 gem 'underscore-rails', '~> 1.7.0'
 
