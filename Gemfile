@@ -27,6 +27,7 @@ end
 
 gem 'active_model_serializers', '~> 0.9.0'
 gem 'activeadmin', github: 'activeadmin'
+gem 'arel-helpers', '~> 2.0.1'
 gem 'awesome_print', '~> 1.2.0'
 gem 'devise', '~> 3.4.1'
 gem 'dotenv-rails', '~> 1.0.2'

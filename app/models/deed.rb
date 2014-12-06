@@ -1,4 +1,6 @@
 class Deed < ActiveRecord::Base
+  include ArelHelpers::ArelTable
+
   has_many :likes, dependent: :delete_all
   has_many :reports, dependent: :delete_all
 

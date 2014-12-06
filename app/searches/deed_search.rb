@@ -10,6 +10,6 @@ class DeedSearch < Searchlight::Search
   end
 
   def search_created_at
-    search.where('deeds.created_at >= ?', created_at)
+    search.where(Deed[:created_at].gteq(created_at))
   end
 end
