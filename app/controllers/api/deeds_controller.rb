@@ -1,15 +1,12 @@
 class Api::DeedsController < ApplicationController
   def index
-    search = DeedSearch.new(search_params)
+    deeds = DeedFetcher.new(search_params).all
 
-    render json: search.results
+    render json: deeds
   end
 
   def count
-    search = DeedSearch.new(search_params)
-    count = search.results.count
-
-    render json: {count: count}
+    render json: {count: Deed.count}
   end
 
   def create
