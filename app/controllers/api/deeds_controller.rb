@@ -6,7 +6,9 @@ class Api::DeedsController < ApplicationController
   end
 
   def count
-    render json: {count: Deed.count}
+    @count = DeedCounter.new(search_params).count
+
+    render json: {count: @count}
   end
 
   def create
