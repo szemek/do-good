@@ -1,13 +1,6 @@
 .deeds.row
   .hide-for-small-only.medium-2.large-2.columns &nbsp;
   .small-12.medium-8.large-8.columns
-    %div{'ng-repeat' => 'combined in collection'}
-      .strip-wrapper
-        %i.fa.dark-strip-icon
-      .day
-        {{combined.timestamp | date:'d'}}
-        %sup {{combined.timestamp | date:'d' | ordinal}}
-        {{combined.timestamp | date:'MMMM'}}
-      = render 'deed'
+    = render 'deed'
 
   .hide-for-small-only.medium-2.large-2.columns &nbsp;
